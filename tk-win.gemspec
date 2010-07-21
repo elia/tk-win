@@ -5,13 +5,13 @@
 
 Gem::Specification.new do |s|
   s.name = %q{tk-win}
-  s.version = "0.2.1"
+  s.version = "0.2.2"
   s.platform = %q{x86-mingw32}
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Hidetoshi NAGAI", "Elia Schito"]
+  s.authors = ["Hidetoshi Nagai", "Elia Schito"]
   s.date = %q{2010-07-21}
-  s.description = %q{RubyTk bindings for windows bundled with tcltklib.so and tkutil.soin}
+  s.description = %q{RubyTk bindings for windows bundled with tcltklib.so and tkutil.so for windows RubyInstaller 1.9.1}
   s.email = %q{elia.schito@gmail.com}
   s.extra_rdoc_files = [
     "LICENSE",
@@ -24,12 +24,15 @@ Gem::Specification.new do |s|
      "README.rdoc",
      "Rakefile",
      "VERSION",
+     "lib/multi-tk.rb",
+     "lib/remote-tk.rb",
      "lib/tcltk.rb",
      "lib/tk.rb",
      "lib/tk/after.rb",
      "lib/tk/autoload.rb",
      "lib/tk/bgerror.rb",
      "lib/tk/bindtag.rb",
+     "lib/tk/busy.rb",
      "lib/tk/button.rb",
      "lib/tk/canvas.rb",
      "lib/tk/canvastag.rb",
@@ -43,6 +46,7 @@ Gem::Specification.new do |s|
      "lib/tk/entry.rb",
      "lib/tk/event.rb",
      "lib/tk/font.rb",
+     "lib/tk/fontchooser.rb",
      "lib/tk/frame.rb",
      "lib/tk/grid.rb",
      "lib/tk/image.rb",
@@ -236,21 +240,34 @@ Gem::Specification.new do |s|
      "lib/tkextlib/pkg_checker.rb",
      "lib/tkextlib/setup.rb",
      "lib/tkextlib/tcllib.rb",
+     "lib/tkextlib/tcllib/README",
      "lib/tkextlib/tcllib/autoscroll.rb",
+     "lib/tkextlib/tcllib/calendar.rb",
+     "lib/tkextlib/tcllib/canvas_sqmap.rb",
+     "lib/tkextlib/tcllib/canvas_zoom.rb",
+     "lib/tkextlib/tcllib/chatwidget.rb",
+     "lib/tkextlib/tcllib/crosshair.rb",
      "lib/tkextlib/tcllib/ctext.rb",
      "lib/tkextlib/tcllib/cursor.rb",
+     "lib/tkextlib/tcllib/dateentry.rb",
      "lib/tkextlib/tcllib/datefield.rb",
+     "lib/tkextlib/tcllib/diagrams.rb",
      "lib/tkextlib/tcllib/dialog.rb",
      "lib/tkextlib/tcllib/getstring.rb",
      "lib/tkextlib/tcllib/history.rb",
      "lib/tkextlib/tcllib/ico.rb",
      "lib/tkextlib/tcllib/ip_entry.rb",
+     "lib/tkextlib/tcllib/khim.rb",
+     "lib/tkextlib/tcllib/menuentry.rb",
+     "lib/tkextlib/tcllib/ntext.rb",
      "lib/tkextlib/tcllib/panelframe.rb",
      "lib/tkextlib/tcllib/plotchart.rb",
      "lib/tkextlib/tcllib/ruler.rb",
      "lib/tkextlib/tcllib/screenruler.rb",
+     "lib/tkextlib/tcllib/scrolledwindow.rb",
      "lib/tkextlib/tcllib/scrollwin.rb",
      "lib/tkextlib/tcllib/setup.rb",
+     "lib/tkextlib/tcllib/statusbar.rb",
      "lib/tkextlib/tcllib/style.rb",
      "lib/tkextlib/tcllib/superframe.rb",
      "lib/tkextlib/tcllib/swaplist.rb",
@@ -258,6 +275,7 @@ Gem::Specification.new do |s|
      "lib/tkextlib/tcllib/tablelist_core.rb",
      "lib/tkextlib/tcllib/tablelist_tile.rb",
      "lib/tkextlib/tcllib/tkpiechart.rb",
+     "lib/tkextlib/tcllib/toolbar.rb",
      "lib/tkextlib/tcllib/tooltip.rb",
      "lib/tkextlib/tcllib/widget.rb",
      "lib/tkextlib/tclx.rb",
@@ -284,6 +302,7 @@ Gem::Specification.new do |s|
      "lib/tkextlib/tile/tscale.rb",
      "lib/tkextlib/tile/tscrollbar.rb",
      "lib/tkextlib/tile/tseparator.rb",
+     "lib/tkextlib/tile/tspinbox.rb",
      "lib/tkextlib/tile/tsquare.rb",
      "lib/tkextlib/tkDND.rb",
      "lib/tkextlib/tkDND/setup.rb",
@@ -293,6 +312,7 @@ Gem::Specification.new do |s|
      "lib/tkextlib/tkHTML/htmlwidget.rb",
      "lib/tkextlib/tkHTML/setup.rb",
      "lib/tkextlib/tkimg.rb",
+     "lib/tkextlib/tkimg/README",
      "lib/tkextlib/tkimg/bmp.rb",
      "lib/tkextlib/tkimg/gif.rb",
      "lib/tkextlib/tkimg/ico.rb",
@@ -349,12 +369,12 @@ Gem::Specification.new do |s|
      "spec/tk-win_spec.rb",
      "tk-win.gemspec"
   ]
-  s.homepage = %q{http://github.com/elia/tk-win}
+  s.homepage = %q{http://www.dumbo.ai.kyutech.ac.jp/nagai/RubyTk/?Ruby%2FTk-Kit}
   s.rdoc_options = ["--charset=UTF-8"]
-  s.require_paths = ["lib", "lib/x86-mingw32", "lib/x86-mingw32"]
+  s.require_paths = ["lib", "lib/x86-mingw32"]
   s.required_ruby_version = Gem::Requirement.new("~> 1.9.1")
   s.rubygems_version = %q{1.3.7}
-  s.summary = %q{RubyTk bindings for windows bundled with tcltklib and tkutil}
+  s.summary = %q{RubyTk bindings for MS Windows RubyInstaller 1.9.1 bundled with binaries.}
   s.test_files = [
     "spec/spec_helper.rb",
      "spec/tk-win_spec.rb"

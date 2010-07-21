@@ -5,18 +5,19 @@ require 'rake'
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
-    gem.name = "tk-win"
-    gem.summary = %Q{RubyTk bindings for windows bundled with tcltklib and tkutil}
-    gem.description = %Q{RubyTk bindings for windows bundled with tcltklib.so and tkutil.soin}
-    gem.email = "elia.schito@gmail.com"
-    gem.homepage = "http://github.com/elia/tk-win"
-    gem.authors = ["Hidetoshi NAGAI", "Elia Schito"]
-    gem.add_development_dependency "rspec", "~> 1.2.9"
-    gem.required_ruby_version = "~> 1.9.1"
-    gem.platform = 'x86-mingw32'
-    gem.require_paths << "lib/#{gem.platform}"
-    gem.files += Dir["lib/#{gem.platform}/*.so"]
+    gem.name                  = "tk-win"
+    gem.summary               = %Q{RubyTk bindings for MS Windows RubyInstaller 1.9.1 bundled with binaries.}
+    gem.description           = %Q{RubyTk bindings for windows bundled with tcltklib.so and tkutil.so for windows RubyInstaller 1.9.1}
+    gem.email                 = "elia.schito@gmail.com"
+    gem.homepage              = "http://www.dumbo.ai.kyutech.ac.jp/nagai/RubyTk/?Ruby%2FTk-Kit"
+    gem.authors               = ["Hidetoshi Nagai", "Elia Schito"]
     
+    gem.required_ruby_version = "~> 1.9.1"
+    gem.platform              = "x86-mingw32"
+    gem.require_paths        += Dir["lib/#{gem.platform}"]
+    gem.files                += Dir["lib/#{gem.platform}/*.so"]
+    
+    gem.add_development_dependency "rspec", "~> 1.2.9"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   Jeweler::GemcutterTasks.new
