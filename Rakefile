@@ -8,7 +8,7 @@ begin
     gem.name                  = "tk-win"
     gem.summary               = %Q{RubyTk bindings for MS Windows RubyInstaller 1.9.1 bundled with binaries.}
     gem.description           = %Q{RubyTk bindings for windows bundled with tcltklib.so and tkutil.so for windows RubyInstaller 1.9.1}
-    gem.email                 = "elia.schito@gmail.com"
+    gem.email                 = "perlelia"+%w"@gmail.com".first
     gem.homepage              = "http://www.dumbo.ai.kyutech.ac.jp/nagai/RubyTk/?Ruby%2FTk-Kit"
     gem.authors               = ["Hidetoshi Nagai", "Elia Schito"]
     
